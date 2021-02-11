@@ -1,15 +1,15 @@
 #N canvas 760 119 467 556 10;
 #X obj 140 137 until;
 #X obj 140 216 list store;
-#X obj 158 114 t b b l;
+#X obj 140 114 t b b l, f 10;
 #X obj 140 170 f;
 #X obj 170 170 + 1;
 #X msg 140 193 get \$1 1;
 #X msg 177 137 0;
 #X msg 140 330 get \$1 1;
 #X obj 140 353 list store, f 20;
-#X obj 230 111 inlet gamme;
-#X obj 158 81 inlet degre(s);
+#X obj 230 131 inlet gamme;
+#X obj 140 81 inlet degre(s);
 #X obj 140 446 outlet note;
 #X obj 230 239 t l l;
 #X obj 230 262 list length;
