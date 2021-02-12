@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="2968" name-counter="1" event-counter="264463" vca-counter="1">
+<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="3202" name-counter="1" event-counter="500388" vca-counter="1">
   <ProgramVersion created-with="Ardour 6.5.0~ds0-1" modified-with="Ardour 6.5.0~ds0-1"/>
   <MIDIPorts>
     <Port name="Clavier Virtuel" direction="output">
@@ -263,7 +263,7 @@
         <Controllable name="Chorus Depth" id="2698" flags="" value="0" parameter="13" symbol="chorus_depth"/>
         <Controllable name="Chorus Level" id="2700" flags="" value="0" parameter="14" symbol="chorus_level"/>
         <Controllable name="Chorus Type" id="2702" flags="" value="0" parameter="15" symbol="chorus_type"/>
-        <Controllable name="property-urn:ardour:a-fluidsynth:sf2file" id="2848" flags="NotAutomatable" property="60"/>
+        <Controllable name="property-urn:ardour:a-fluidsynth:sf2file" id="3082" flags="NotAutomatable" property="60"/>
       </Processor>
       <Processor id="2709" name="Calf Limiter" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="http://calf.sourceforge.net/plugins/Limiter" count="1" custom="0">
         <Automation>
@@ -355,7 +355,7 @@
       <Controllable name="rec-enable" id="2653" flags="Toggle,RealTime" value="0"/>
       <Controllable name="midicc-0-0" id="2732" flags="" value="0"/>
       <Controllable name="midicc-0-32" id="2733" flags="" value="0"/>
-      <Controllable name="midi-pgm-change-0" id="2734" flags="" value="11"/>
+      <Controllable name="midi-pgm-change-0" id="2734" flags="" value="8"/>
     </Route>
   </Routes>
   <Playlists>

@@ -24,11 +24,12 @@
 #X obj 220 465 *;
 #X obj 235 443 r ms;
 #X obj 151 80 inlet divisions_temps(encodes);
-#X obj 151 591 outlet divisions_temps(ms);
+#X obj 151 621 outlet divisions_temps(ms);
 #X obj 220 284 sel 0 1 2 3 4 5 6 7 8 9 10 11 12;
-#X obj 151 563 list, f 7;
-#X obj 220 499 list prepend;
-#X obj 190 532 list;
+#X obj 151 586 list, f 7;
+#X obj 220 492 list prepend;
+#X obj 190 555 list;
+#X obj 190 522 t b b;
 #X connect 0 0 13 0;
 #X connect 1 0 13 0;
 #X connect 2 0 13 0;
@@ -56,7 +57,7 @@
 #X connect 20 0 17 1;
 #X connect 21 0 27 0;
 #X connect 21 1 16 0;
-#X connect 21 2 29 0;
+#X connect 21 2 30 0;
 #X connect 22 0 28 0;
 #X connect 23 0 22 1;
 #X connect 24 0 21 0;
@@ -77,3 +78,5 @@
 #X connect 28 0 29 0;
 #X connect 29 0 28 1;
 #X connect 29 0 27 1;
+#X connect 30 0 29 0;
+#X connect 30 1 29 1;
