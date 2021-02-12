@@ -52,7 +52,7 @@
 #X text 448 187 dharm;
 #X text 453 220 pent;
 #X obj 410 120 vradio 30 1 0 4 gamme-select in-gamme-select empty 0
--8 0 10 -162280 -262144 -1 1;
+-8 0 10 -162280 -262144 -1 2;
 #X obj 32 250 s in-tempo;
 #X obj 42 230 s in-tonalite;
 #X msg 510 337 0 2 4 5 7 9 11;
@@ -66,10 +66,10 @@
 #X obj 52 210 s in-gamme-select;
 #X obj 32 154 r metro;
 #X obj 32 177 t b;
-#X obj 413 514 t a a;
-#X obj 413 587 s gamme;
-#X obj 440 537 list length;
-#X obj 440 560 s gamme-length;
+#X obj 413 524 t a a;
+#X obj 413 597 s gamme;
+#X obj 440 547 list length;
+#X obj 440 570 s gamme-length;
 #X obj 138 162 nbx 5 15 -1e+37 1e+37 0 0 degre in-degre empty 0 -8
 0 10 -262144 -1 -1 0 256;
 #X text 135 142 degre;
@@ -79,6 +79,7 @@
 #X msg 172 607 0;
 #X obj 172 584 loadbang;
 #X obj 113 525 tonal;
+#X msg 510 496 0 2 3 6 7 9 10;
 #X connect 4 0 3 0;
 #X connect 7 0 35 0;
 #X connect 10 0 35 0;
@@ -95,7 +96,6 @@
 #X connect 25 0 21 0;
 #X connect 27 0 28 0;
 #X connect 28 0 16 0;
-#X connect 28 0 26 0;
 #X connect 28 0 17 0;
 #X connect 29 0 30 0;
 #X connect 29 1 31 0;
@@ -103,3 +103,4 @@
 #X connect 37 0 36 2;
 #X connect 38 0 37 0;
 #X connect 39 0 36 0;
+#X connect 40 0 29 0;

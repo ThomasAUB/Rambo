@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="3202" name-counter="1" event-counter="500388" vca-counter="1">
+<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="3697" name-counter="1" event-counter="1049048" vca-counter="1">
   <ProgramVersion created-with="Ardour 6.5.0~ds0-1" modified-with="Ardour 6.5.0~ds0-1"/>
   <MIDIPorts>
     <Port name="Clavier Virtuel" direction="output">
@@ -66,12 +66,18 @@
     <Option name="meterbridge-label-height" value="0"/>
   </Config>
   <Metadata/>
-  <Sources/>
-  <Regions/>
-  <Selection>
-    <StripableAutomationControl stripable="2609" control="0" order="0"/>
-  </Selection>
-  <Locations/>
+  <Sources>
+    <Source name="pd 1-2.mid" take-id="2021-02-12 21.49.43" type="midi" flags="Writable,CanRename" id="3577" natural-position="0" captured-for="pd 1" origin=""/>
+  </Sources>
+  <Regions>
+    <Region name="pd 1-2" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="457216" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="20.735419501133784" id="3673" type="midi" first-edit="nothing" source-0="3577" master-source-0="3577"/>
+  </Regions>
+  <Selection/>
+  <Locations>
+    <Location id="3670" name="décrochage (xrun)" start="394240" end="394240" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613162982"/>
+    <Location id="3671" name="décrochage (xrun)" start="423936" end="423936" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613162983"/>
+    <Location id="3679" name="session" start="0" end="457215" flags="IsSessionRange" locked="0" position-lock-style="AudioTime" timestamp="1613162983"/>
+  </Locations>
   <Bundles/>
   <VCAManager/>
   <Routes>
@@ -154,13 +160,14 @@
       </Processor>
       <Slavable/>
     </Route>
-    <Route version="6000" id="2609" name="pd 1" default-type="midi" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" midi-playlist="2648" saved-meter-point="MeterPostFader" alignment-choice="Automatic" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="0" input-active="1">
+    <Route version="6000" id="2609" name="pd 1" default-type="midi" strict-io="1" active="1" denormal-protection="0" meter-point="MeterInput" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" midi-playlist="2648" saved-meter-point="MeterPostFader" alignment-choice="Automatic" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="0" input-active="1">
       <PresentationInfo order="1" flags="MidiTrack,OrderSet" color="3100632575"/>
       <Controllable name="solo" id="2617" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
       <Controllable name="solo-iso" id="2623" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="2625" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="pd 1" id="2637" direction="Input" default-type="midi">
         <Port type="midi" name="pd 1/midi_in 1">
+          <Connection other="a2j:Pure Data [130] (capture): Pure Data Midi-Out 1"/>
           <Connection other="Clavier Virtuel"/>
         </Port>
       </IO>
@@ -200,6 +207,7 @@
           <AutomationList automation-id="pan-lfe" id="2635" interpolation-style="Linear" state="Off"/>
         </Automation>
       </Pannable>
+      <Processor id="2643" name="meter-pd 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
       <Processor id="2647" name="pd 1" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="no"/>
       <Processor id="2646" name="pd 1" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
       <Processor id="2640" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
@@ -263,7 +271,7 @@
         <Controllable name="Chorus Depth" id="2698" flags="" value="0" parameter="13" symbol="chorus_depth"/>
         <Controllable name="Chorus Level" id="2700" flags="" value="0" parameter="14" symbol="chorus_level"/>
         <Controllable name="Chorus Type" id="2702" flags="" value="0" parameter="15" symbol="chorus_type"/>
-        <Controllable name="property-urn:ardour:a-fluidsynth:sf2file" id="3082" flags="NotAutomatable" property="60"/>
+        <Controllable name="property-urn:ardour:a-fluidsynth:sf2file" id="3549" flags="NotAutomatable" property="60"/>
       </Processor>
       <Processor id="2709" name="Calf Limiter" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="http://calf.sourceforge.net/plugins/Limiter" count="1" custom="0">
         <Automation>
@@ -331,7 +339,6 @@
         </Automation>
         <Controllable name="gaincontrol" id="2613" flags="GainLike" value="1"/>
       </Processor>
-      <Processor id="2643" name="meter-pd 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
       <Processor id="2644" name="pd 1" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="pd 1" type="main-outs" role="Main">
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
         <Pannable>
@@ -352,14 +359,16 @@
       <Slavable/>
       <Controllable name="monitor" id="2657" flags="RealTime" value="0" monitoring=""/>
       <Controllable name="rec-safe" id="2655" flags="Toggle,RealTime" value="0"/>
-      <Controllable name="rec-enable" id="2653" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="rec-enable" id="2653" flags="Toggle,RealTime" value="1"/>
       <Controllable name="midicc-0-0" id="2732" flags="" value="0"/>
       <Controllable name="midicc-0-32" id="2733" flags="" value="0"/>
-      <Controllable name="midi-pgm-change-0" id="2734" flags="" value="8"/>
+      <Controllable name="midi-pgm-change-0" id="2734" flags="" value="0"/>
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="2648" name="pd 1.1" type="midi" orig-track-id="2609" shared-with-ids="" frozen="0" combine-ops="0"/>
+    <Playlist id="2648" name="pd 1.1" type="midi" orig-track-id="2609" shared-with-ids="" frozen="0" combine-ops="0">
+      <Region name="pd 1-2.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="7184" length="450032" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0.32580498866213153" length-beats="20.409614512471652" id="3676" type="midi" first-edit="nothing" source-0="3577" master-source-0="3577"/>
+    </Playlist>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups/>
@@ -449,8 +458,8 @@
       <Window name="RPM-2503" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="RPM-2609" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-2609-2678" visible="0" x-off="336" y-off="240" x-size="938" y-size="377" custom-ui="1"/>
-      <Window name="PM-2609-2678" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-2609-2709" visible="0" x-off="437" y-off="246" x-size="736" y-size="364" custom-ui="1"/>
+      <Window name="PM-2609-2678" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-2609-2709" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <GUIObjectState>
         <Object id="strip 61" visible="1">
@@ -514,7 +523,7 @@
             <Object id="control 2729" visible="0"/>
           </Object>
         </Object>
-        <Object id="rtav 2609" height="286" visible="1" note-range-min="58" note-range-max="103" midnam-custom-device-mode="" color-mode="MeterColors"/>
+        <Object id="rtav 2609" height="286" visible="1" note-range-min="37" note-range-max="60" midnam-custom-device-mode="" color-mode="MeterColors"/>
         <Object id="automation 2613" height="68" visible="0"/>
         <Object id="automation 2609 12/0/0" height="68" visible="0"/>
         <Object id="automation 2628" height="68" visible="0"/>
