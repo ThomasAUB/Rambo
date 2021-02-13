@@ -33,9 +33,9 @@
 #X obj 172 271 moses, f 10;
 #X obj 172 248 random 100;
 #X msg 555 106 \$1 100;
-#X text 631 63 plage de variabilité entre chaque élément \, pourcentage
-de chance d'avoir une nouvelle valeur;
 #X obj 115 522 t b b;
+#X text 631 63 plage de variabilité entre chaque élément (-n \,
++n) \, pourcentage de chance d'avoir une nouvelle valeur;
 #X connect 0 0 13 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -72,12 +72,12 @@ de chance d'avoir une nouvelle valeur;
 #X connect 27 0 24 0;
 #X connect 28 0 1 0;
 #X connect 28 1 0 0;
-#X connect 28 2 34 0;
+#X connect 28 2 33 0;
 #X connect 28 3 27 0;
 #X connect 29 0 26 0;
 #X connect 29 1 32 0;
 #X connect 30 0 21 0;
 #X connect 31 0 30 0;
 #X connect 32 0 26 0;
-#X connect 34 0 3 0;
-#X connect 34 1 3 1;
+#X connect 33 0 3 0;
+#X connect 33 1 3 1;

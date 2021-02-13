@@ -2,13 +2,36 @@
 <instant>
   <LastUsedSnapshot name="rambo_ardour"/>
   <Main x="0" y="0" w="1600" h="845" current-tab="editor"/>
-  <Editor id="41" edit-horizontal-pane-pos="0.89999997615814209" notebook-shrunk="0" edit-vertical-pane-pos="0.86369955539703369" mixer-width="Wide" zoom-focus="ZoomFocusPlayhead" zoom="512" grid-type="GridTypeBeatDiv16" snap-mode="SnapOff" internal-grid-type="GridTypeBeat" internal-snap-mode="SnapMagnetic" pre-internal-grid-type="GridTypeBeatDiv16" pre-internal-snap-mode="SnapOff" edit-point="EditAtMouse" visible-track-count="-1" playhead="0" left-frame="0" y-origin="0" maximised="0" follow-playhead="0" stationary-playhead="0" mouse-mode="MouseObject" join-object-range="0" show-editor-mixer="1" show-editor-list="1" editor-list-page="0" show-marker-lines="0" nudge-clock-value="220500">
+  <Editor id="41" edit-horizontal-pane-pos="0.89999997615814209" notebook-shrunk="0" edit-vertical-pane-pos="0.86369955539703369" mixer-width="Wide" zoom-focus="ZoomFocusPlayhead" zoom="6288" grid-type="GridTypeBeatDiv16" snap-mode="SnapOff" internal-grid-type="GridTypeBeat" internal-snap-mode="SnapOff" pre-internal-grid-type="GridTypeBeatDiv16" pre-internal-snap-mode="SnapOff" edit-point="EditAtMouse" visible-track-count="-1" playhead="0" left-frame="0" y-origin="0" maximised="0" follow-playhead="0" stationary-playhead="0" mouse-mode="MouseObject" join-object-range="0" show-editor-mixer="1" show-editor-list="1" editor-list-page="0" show-marker-lines="0" nudge-clock-value="220500">
     <Window name="Éditeur" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" tabbed="1"/>
     <Buttons>
       <Press/>
       <Release/>
     </Buttons>
-    <Selection/>
+    <Selection>
+      <MIDINotes region-id="3723">
+        <note note-id="1187866"/>
+        <note note-id="1187911"/>
+        <note note-id="1187932"/>
+        <note note-id="1187948"/>
+        <note note-id="1188256"/>
+        <note note-id="1188259"/>
+        <note note-id="1188276"/>
+        <note note-id="1188279"/>
+        <note note-id="1188301"/>
+        <note note-id="1188321"/>
+        <note note-id="1188546"/>
+        <note note-id="1188559"/>
+        <note note-id="1188625"/>
+        <note note-id="1188643"/>
+        <note note-id="1188730"/>
+        <note note-id="1188797"/>
+        <note note-id="1195910"/>
+        <note note-id="1195928"/>
+        <note note-id="1195947"/>
+        <note note-id="1195951"/>
+      </MIDINotes>
+    </Selection>
     <RegionList/>
     <EditorLocations clock-mode="BBT"/>
   </Editor>

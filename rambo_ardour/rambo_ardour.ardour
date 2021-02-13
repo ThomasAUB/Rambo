@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="3700" name-counter="1" event-counter="1049199" vca-counter="1">
+<Session version="6000" name="rambo_ardour" sample-rate="44100" end-is-free="1" session-range-is-free="1" id-counter="3788" name-counter="1" event-counter="1363615" vca-counter="1">
   <ProgramVersion created-with="Ardour 6.5.0~ds0-1" modified-with="Ardour 6.5.0~ds0-1"/>
   <MIDIPorts>
     <Port name="Clavier Virtuel" direction="output">
@@ -68,16 +68,24 @@
   <Metadata/>
   <Sources>
     <Source name="pd 1-2.mid" take-id="2021-02-12 21.49.43" type="midi" flags="Writable,CanRename" id="3577" natural-position="0" captured-for="pd 1" origin=""/>
+    <Source name="pd 1-3.mid" take-id="2021-02-12 23.18.41" type="midi" flags="Writable,CanRename" id="3681" natural-position="0" captured-for="pd 1" origin=""/>
+    <Source name="pd 1-4.mid" take-id="2021-02-12 23.20.43" type="midi" flags="Writable,CanRename" id="3711" natural-position="0" captured-for="pd 1" origin=""/>
   </Sources>
   <Regions>
     <Region name="pd 1-2" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="457216" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="20.735419501133784" id="3673" type="midi" first-edit="nothing" source-0="3577" master-source-0="3577"/>
     <Region name="pd 1-2.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="7184" length="450032" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0.32580498866213153" length-beats="20.409614512471652" id="3676" type="midi" first-edit="nothing" source-0="3577" master-source-0="3577"/>
+    <Region name="pd 1-3" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="795664" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="36.084535147392288" id="3704" type="midi" first-edit="nothing" source-0="3681" master-source-0="3681"/>
+    <Region name="pd 1-3.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="795660" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="36.084375000000001" id="3707" type="midi" first-edit="nothing" source-0="3681" master-source-0="3681"/>
+    <Region name="pd 1-4" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="5225744" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="236.99519274376419" id="3720" type="midi" first-edit="nothing" source-0="3711" master-source-0="3711"/>
   </Regions>
   <Selection/>
   <Locations>
     <Location id="3670" name="décrochage (xrun)" start="394240" end="394240" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613162982"/>
     <Location id="3671" name="décrochage (xrun)" start="423936" end="423936" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613162983"/>
-    <Location id="3679" name="session" start="0" end="457215" flags="IsSessionRange" locked="0" position-lock-style="AudioTime" timestamp="1613162983"/>
+    <Location id="3679" name="session" start="0" end="5225734" flags="IsSessionRange" locked="0" position-lock-style="AudioTime" timestamp="1613162983"/>
+    <Location id="3702" name="décrochage (xrun)" start="0" end="0" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613168304"/>
+    <Location id="3717" name="décrochage (xrun)" start="2580480" end="2580480" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613168383"/>
+    <Location id="3718" name="décrochage (xrun)" start="3542528" end="3542528" flags="IsMark" locked="0" position-lock-style="AudioTime" timestamp="1613168405"/>
   </Locations>
   <Bundles/>
   <VCAManager/>
@@ -161,7 +169,7 @@
       </Processor>
       <Slavable/>
     </Route>
-    <Route version="6000" id="2609" name="pd 1" default-type="midi" strict-io="1" active="1" denormal-protection="0" meter-point="MeterInput" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" midi-playlist="2648" saved-meter-point="MeterPostFader" alignment-choice="Automatic" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="0" input-active="1">
+    <Route version="6000" id="2609" name="pd 1" default-type="midi" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" midi-playlist="2648" saved-meter-point="MeterPostFader" alignment-choice="Automatic" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="0" input-active="1">
       <PresentationInfo order="1" flags="MidiTrack,OrderSet" color="3100632575"/>
       <Controllable name="solo" id="2617" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
       <Controllable name="solo-iso" id="2623" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
@@ -208,7 +216,6 @@
           <AutomationList automation-id="pan-lfe" id="2635" interpolation-style="Linear" state="Off"/>
         </Automation>
       </Pannable>
-      <Processor id="2643" name="meter-pd 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
       <Processor id="2647" name="pd 1" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="no"/>
       <Processor id="2646" name="pd 1" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
       <Processor id="2640" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
@@ -334,12 +341,49 @@
         <Controllable name="Oversampling" id="2727" flags="" value="1" parameter="22" symbol="oversampling"/>
         <Controllable name="Auto-level" id="2729" flags="Toggle" value="1" parameter="23" symbol="auto_level"/>
       </Processor>
+      <Processor id="3780" name="Roomy" active="0" user-latency="0" use-user-latency="0" type="lv2" unique-id="http://www.openavproductions.com/artyfx#roomy" count="1" custom="0">
+        <Automation>
+          <AutomationList automation-id="parameter-4" id="3781" interpolation-style="Linear" state="Off"/>
+          <AutomationList automation-id="parameter-5" id="3783" interpolation-style="Linear" state="Off"/>
+          <AutomationList automation-id="parameter-6" id="3785" interpolation-style="Linear" state="Off"/>
+        </Automation>
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
+          <Port symbol="time" value="0.5"/>
+          <Port symbol="damping" value="0"/>
+          <Port symbol="dry_wet" value="0.44999992847442627"/>
+        </lv2>
+        <Controllable name="Time" id="3782" flags="" value="0.5" parameter="4" symbol="time"/>
+        <Controllable name="Damping" id="3784" flags="" value="0" parameter="5" symbol="damping"/>
+        <Controllable name="Dry Wet Mix" id="3786" flags="" value="0.44999992847442627" parameter="6" symbol="dry_wet"/>
+      </Processor>
       <Processor id="2639" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
         <Automation>
           <AutomationList automation-id="gain" id="2612" interpolation-style="Exponential" state="Off"/>
         </Automation>
         <Controllable name="gaincontrol" id="2613" flags="GainLike" value="1"/>
       </Processor>
+      <Processor id="2643" name="meter-pd 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
       <Processor id="2644" name="pd 1" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="pd 1" type="main-outs" role="Main">
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
         <Pannable>
@@ -360,14 +404,19 @@
       <Slavable/>
       <Controllable name="monitor" id="2657" flags="RealTime" value="0" monitoring=""/>
       <Controllable name="rec-safe" id="2655" flags="Toggle,RealTime" value="0"/>
-      <Controllable name="rec-enable" id="2653" flags="Toggle,RealTime" value="1"/>
+      <Controllable name="rec-enable" id="2653" flags="Toggle,RealTime" value="0"/>
       <Controllable name="midicc-0-0" id="2732" flags="" value="0"/>
       <Controllable name="midicc-0-32" id="2733" flags="" value="0"/>
+      <Controllable name="midicc-1-0" id="3738" flags="" value="0"/>
+      <Controllable name="midicc-1-32" id="3739" flags="" value="0"/>
       <Controllable name="midi-pgm-change-0" id="2734" flags="" value="0"/>
+      <Controllable name="midi-pgm-change-1" id="3740" flags="" value="0"/>
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="2648" name="pd 1.1" type="midi" orig-track-id="2609" shared-with-ids="" frozen="0" combine-ops="0"/>
+    <Playlist id="2648" name="pd 1.1" type="midi" orig-track-id="2609" shared-with-ids="" frozen="0" combine-ops="0">
+      <Region name="pd 1-4.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="5225735" position="8381904" beat="380.1317006802721" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="MusicTime" layering-index="0" tags="" contents="0" start-beats="0" length-beats="236.99479166666666" id="3723" type="midi" first-edit="nothing" source-0="3711" master-source-0="3711"/>
+    </Playlist>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups/>
@@ -433,6 +482,31 @@
     <Protocol name="Wiimote" active="0" session-state="0"/>
   </ControlProtocols>
   <Extra>
+    <ExportRevision revision="1"/>
+    <ExportProfile>
+      <ExportTimespan format="Timecode">
+        <Range id="3679"/>
+      </ExportTimespan>
+      <ExportChannelConfiguration split="0" channels="2">
+        <Channel number="1">
+          <Port name="Bus Master/audio_out 1"/>
+        </Channel>
+        <Channel number="2">
+          <Port name="Bus Master/audio_out 2"/>
+        </Channel>
+      </ExportChannelConfiguration>
+      <ExportFormat id="7bb867db-67b0-4aaf-9987-38c31e15052e"/>
+      <ExportFilename>
+        <Folder relative="1" path="/export"/>
+        <Field name="label" enabled="1" value="extract_1"/>
+        <Field name="session" enabled="1"/>
+        <Field name="snapshot" enabled="0"/>
+        <Field name="timespan" enabled="0"/>
+        <Field name="revision" enabled="0"/>
+        <Field name="time" enabled="0" value="T_None"/>
+        <Field name="date" enabled="0" value="D_None"/>
+      </ExportFilename>
+    </ExportProfile>
     <UI>
       <Window name="key-editor" visible="0" x-off="151" y-off="129" x-size="819" y-size="474"/>
       <Window name="session-options-editor" visible="0" x-off="0" y-off="244" x-size="1048" y-size="835"/>
@@ -460,6 +534,8 @@
       <Window name="P-2609-2709" visible="0" x-off="437" y-off="246" x-size="736" y-size="364" custom-ui="1"/>
       <Window name="PM-2609-2678" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-2609-2709" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-2609-3780" visible="0" x-off="374" y-off="207" x-size="403" y-size="34" custom-ui="1"/>
+      <Window name="PM-2609-3780" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <GUIObjectState>
         <Object id="strip 61" visible="1">
           <Object id="processor 91">
@@ -521,8 +597,32 @@
             <Object id="control 2727" visible="0"/>
             <Object id="control 2729" visible="0"/>
           </Object>
+          <Object id="processor 3742">
+            <Object id="control 3744" visible="0"/>
+            <Object id="control 3746" visible="0"/>
+            <Object id="control 3748" visible="0"/>
+            <Object id="control 3750" visible="0"/>
+            <Object id="control 3752" visible="0"/>
+            <Object id="control 3754" visible="0"/>
+            <Object id="control 3756" visible="0"/>
+            <Object id="control 3758" visible="0"/>
+            <Object id="control 3760" visible="0"/>
+            <Object id="control 3762" visible="0"/>
+            <Object id="control 3764" visible="0"/>
+            <Object id="control 3766" visible="0"/>
+          </Object>
+          <Object id="processor 3770">
+            <Object id="control 3772" visible="0"/>
+            <Object id="control 3774" visible="0"/>
+            <Object id="control 3776" visible="0"/>
+          </Object>
+          <Object id="processor 3780">
+            <Object id="control 3782" visible="0"/>
+            <Object id="control 3784" visible="0"/>
+            <Object id="control 3786" visible="0"/>
+          </Object>
         </Object>
-        <Object id="rtav 2609" height="286" visible="1" note-range-min="37" note-range-max="60" midnam-custom-device-mode="" color-mode="MeterColors"/>
+        <Object id="rtav 2609" height="286" visible="1" note-range-min="0" note-range-max="100" midnam-custom-device-mode="" color-mode="MeterColors"/>
         <Object id="automation 2613" height="68" visible="0"/>
         <Object id="automation 2609 12/0/0" height="68" visible="0"/>
         <Object id="automation 2628" height="68" visible="0"/>
