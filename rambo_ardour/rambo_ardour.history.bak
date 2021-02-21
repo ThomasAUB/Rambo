@@ -196,7 +196,7 @@
       <ChangedNotes/>
       <AddedNotes/>
       <RemovedNotes>
-        <note id="1196034" note="44" channel="0" time="228.53385416666666" length="2.6447916666666664" velocity="37"/>
+        <note id="1196034" note="44" channel="0" time="228.53281250000001" length="2.6442708333333336" velocity="37"/>
       </RemovedNotes>
     </NoteDiffCommand>
     <MementoCommand obj-id="42" type-name="SelectionMemento">

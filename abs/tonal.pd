@@ -1,0 +1,401 @@
+#N canvas 210 61 1385 803 10;
+#X obj 661 438 lecteur, f 51;
+#X obj 661 629 gamme;
+#X obj 688 606 r gamme;
+#X obj 661 679 +;
+#X obj 676 656 r tonalite;
+#X obj 661 712 noteduree, f 34;
+#N canvas 214 172 581 544 accords 0;
+#X obj 208 188 until;
+#X obj 208 267 list store;
+#X obj 208 221 f;
+#X obj 238 221 + 1;
+#X msg 208 244 get \$1 1;
+#X msg 245 188 0;
+#X obj 208 165 t b b;
+#X obj 177 311 +;
+#X obj 265 51 inlet intervalles-accords;
+#X obj 108 470 outlet accord;
+#X obj 165 113 t b f;
+#X obj 108 77 t b f b;
+#X obj 108 54 inlet degre;
+#X obj 108 438 list, f 7;
+#X obj 177 344 list prepend;
+#X obj 147 407 list;
+#X obj 147 374 t b b;
+#X connect 0 0 2 0;
+#X connect 1 0 7 0;
+#X connect 1 1 0 1;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 1 0;
+#X connect 5 0 2 1;
+#X connect 6 0 0 0;
+#X connect 6 1 5 0;
+#X connect 7 0 14 0;
+#X connect 8 0 1 1;
+#X connect 10 0 6 0;
+#X connect 10 1 7 1;
+#X connect 11 0 13 0;
+#X connect 11 1 10 0;
+#X connect 11 2 16 0;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 14 1;
+#X connect 15 0 13 1;
+#X connect 16 0 15 0;
+#X connect 16 1 15 1;
+#X restore 661 570 pd accords;
+#X obj 661 735 outlet;
+#X obj 964 461 s \$0-fin-sequence;
+#X obj 285 635 del;
+#X obj 886 359 convert_temps;
+#X obj 1186 359 convert_temps;
+#X obj 285 287 r \$0-fin-sequence;
+#X msg 771 540 0;
+#X obj 285 429 spigot;
+#X obj 285 658 t b b b;
+#X msg 689 540 0 2 4;
+#X msg 729 540 0 3 5;
+#X obj 661 461 t a b;
+#X obj 689 516 sel 0 1;
+#N canvas 5 61 450 307 liste_total 0;
+#X obj 135 43 inlet liste;
+#X obj 154 116 serialiseur;
+#X msg 174 88 0;
+#X obj 135 66 t b l b;
+#X obj 135 169 f;
+#X obj 154 139 +;
+#X obj 184 139 f;
+#X obj 135 192 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 1 1 0;
+#X connect 3 2 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 5 0 4 1;
+#X connect 6 0 5 1;
+#X restore 300 487 pd liste_total;
+#X obj 369 521 r ms;
+#X obj 285 612 f;
+#X obj 328 353 r power;
+#X obj 300 562 mod 1000;
+#X obj 300 585 expr $f2-$f1;
+#X obj 318 407 &&;
+#X obj 328 378 t b f;
+#X obj 378 699 sel 0;
+#X obj 378 722 s \$0-nouvelle-sequence;
+#X obj 886 67 r \$0-nouvelle-sequence;
+#X obj 688 492 random 10;
+#X obj 886 177 - 1;
+#X obj 886 223 list prepend 0;
+#N canvas 199 158 845 649 statistiques 0;
+#X obj 604 86 inlet;
+#X text 256 109 réinitialiser;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0-statisticus 64 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 11 11 19 33
+34 44 67 85 143 271 241 202 221 404 195 47 52 51 48 31 29 16 8 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1000 64 0 500 200 1 0 0;
+#X restore 57 383 graph;
+#X obj 631 199 tabread \$0-statisticus;
+#X obj 631 222 + 1;
+#X obj 631 245 tabwrite \$0-statisticus;
+#X msg 338 139 64;
+#X obj 631 153 + 32;
+#X obj 631 176 t f f;
+#X obj 338 162 t f b;
+#X obj 338 208 until;
+#X obj 368 231 + 1;
+#X obj 338 231 i;
+#X msg 365 185 0;
+#X obj 338 254 t b f;
+#X msg 338 277 0;
+#X obj 338 300 tabwrite \$0-statisticus;
+#X obj 338 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 745 413 0 0 0 0 degré - -;
+#X floatatom 604 383 0 0 0 1 occurences!!! - -;
+#X obj 604 289 array max \$0-statisticus;
+#X obj 745 312 - 32;
+#X text 601 412 le gagnant est :;
+#X text 647 442 bravo à lui.;
+#X obj 604 129 t b f;
+#X obj 338 67 loadbang;
+#X connect 0 0 24 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 8 1 5 1;
+#X connect 9 0 10 0;
+#X connect 9 1 13 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 1;
+#X connect 12 0 11 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 1;
+#X connect 14 0 15 0;
+#X connect 14 1 16 1;
+#X connect 15 0 16 0;
+#X connect 17 0 6 0;
+#X connect 20 0 19 0;
+#X connect 20 1 21 0;
+#X connect 21 0 18 0;
+#X connect 24 0 20 0;
+#X connect 24 1 7 0;
+#X connect 25 0 17 0;
+#X restore 930 517 pd statistiques;
+#X obj 378 676 random 8;
+#X text 358 39 VARIABLILITÉ;
+#X text 518 89 %;
+#X text 568 89 x;
+#X text 22 149 velocités;
+#X text 40 169 durées;
+#X text 78 39 GÉRÉNÉRATION;
+#X text 468 89 amp;
+#X text 358 89 min;
+#X text 407 89 max;
+#X text 78 90 min;
+#X text 127 90 max;
+#X text 188 90 amp;
+#X text 237 90 %;
+#X text 188 69 variablilité;
+#X text 468 69 variablilité;
+#X text 357 69 limites;
+#X obj 290 40 nbx 4 15 -1e+37 1e+37 0 0 \$1-GEN-taille in-\$1-GEN-taille
+empty 0 -8 0 10 -262144 -1 -1 8 256;
+#X text 250 39 taille;
+#X text 628 89 mutation;
+#X text 40 129 écarts;
+#X text 288 89 x;
+#X obj 369 544 / 2;
+#X text 77 69 limites;
+#X obj 630 110 tgl 15 0 \$1-degres-VAR-var-mutation in-\$1-degres-VAR-var-mutation
+empty 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 470 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-VAR-var-amp in-\$1-degres-VAR-var-amp
+empty 0 -8 0 10 -262144 -1 -1 8 256;
+#X obj 520 110 nbx 4 15 0 100 0 0 \$1-degres-VAR-var-chance in-\$1-degres-VAR-var-chance
+empty 0 -8 0 10 -262144 -1 -1 40 256;
+#X obj 570 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-VAR-var-x in-\$1-degres-VAR-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 80 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-GEN-lim-min in-\$1-degres-GEN-lim-min
+empty 0 -8 0 10 -262144 -1 -1 -7 256;
+#X obj 130 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-GEN-lim-max in-\$1-degres-GEN-lim-max
+empty 0 -8 0 10 -262144 -1 -1 7 256;
+#X obj 360 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-VAR-lim-min in-\$1-degres-VAR-lim-min
+empty 0 -8 0 10 -262144 -1 -1 -99 256;
+#X obj 410 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-VAR-lim-max in-\$1-degres-VAR-lim-max
+empty 0 -8 0 10 -262144 -1 -1 99 256;
+#X obj 190 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-GEN-var-amp in-\$1-degres-GEN-var-amp
+empty 0 -8 0 10 -262144 -1 -1 3 256;
+#X obj 240 110 nbx 4 15 0 100 0 0 \$1-degres-GEN-var-chance in-\$1-degres-GEN-var-chance
+empty 0 -8 0 10 -262144 -1 -1 100 256;
+#X obj 290 110 nbx 4 15 -1e+37 1e+37 0 0 \$1-degres-GEN-var-x in-\$1-degres-GEN-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 630 130 tgl 15 0 \$1-ecarts-VAR-var-mutation in-\$1-ecarts-VAR-var-mutation
+empty 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 470 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-VAR-var-amp in-\$1-ecarts-VAR-var-amp
+empty 0 -8 0 10 -262144 -1 -1 4 256;
+#X obj 520 130 nbx 4 15 0 100 0 0 \$1-ecarts-VAR-var-chance in-\$1-ecarts-VAR-var-chance
+empty 0 -8 0 10 -262144 -1 -1 10 256;
+#X obj 570 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-VAR-var-x in-\$1-ecarts-VAR-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 80 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-GEN-lim-min in-\$1-ecarts-GEN-lim-min
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 130 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-GEN-lim-max in-\$1-ecarts-GEN-lim-max
+empty 0 -8 0 10 -262144 -1 -1 6 256;
+#X obj 360 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-VAR-lim-min in-\$1-ecarts-VAR-lim-min
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 410 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-VAR-lim-max in-\$1-ecarts-VAR-lim-max
+empty 0 -8 0 10 -262144 -1 -1 12 256;
+#X obj 190 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-GEN-var-amp in-\$1-ecarts-GEN-var-amp
+empty 0 -8 0 10 -262144 -1 -1 2 256;
+#X obj 240 130 nbx 4 15 0 100 0 0 \$1-ecarts-GEN-var-chance in-\$1-ecarts-GEN-var-chance
+empty 0 -8 0 10 -262144 -1 -1 20 256;
+#X obj 290 130 nbx 4 15 -1e+37 1e+37 0 0 \$1-ecarts-GEN-var-x in-\$1-ecarts-GEN-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 630 150 tgl 15 0 \$1-velocites-VAR-var-mutation in-\$1-velocites-VAR-var-mutation
+empty 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 470 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-VAR-var-amp
+in-\$1-velocites-VAR-var-amp empty 0 -8 0 10 -262144 -1 -1 4 256;
+#X obj 520 150 nbx 4 15 0 100 0 0 \$1-velocites-VAR-var-chance in-\$1-velocites-VAR-var-chance
+empty 0 -8 0 10 -262144 -1 -1 60 256;
+#X obj 570 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-VAR-var-x in-\$1-velocites-VAR-var-x
+empty 0 -8 0 10 -262144 -1 -1 5 256;
+#X obj 80 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-GEN-lim-min in-\$1-velocites-GEN-lim-min
+empty 0 -8 0 10 -262144 -1 -1 50 256;
+#X obj 130 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-GEN-lim-max
+in-\$1-velocites-GEN-lim-max empty 0 -8 0 10 -262144 -1 -1 100 256
+;
+#X obj 360 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-VAR-lim-min
+in-\$1-velocites-VAR-lim-min empty 0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 410 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-VAR-lim-max
+in-\$1-velocites-VAR-lim-max empty 0 -8 0 10 -262144 -1 -1 127 256
+;
+#X obj 190 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-GEN-var-amp
+in-\$1-velocites-GEN-var-amp empty 0 -8 0 10 -262144 -1 -1 3 256;
+#X obj 240 150 nbx 4 15 0 100 0 0 \$1-velocites-GEN-var-chance in-\$1-velocites-GEN-var-chance
+empty 0 -8 0 10 -262144 -1 -1 100 256;
+#X obj 290 150 nbx 4 15 -1e+37 1e+37 0 0 \$1-velocites-GEN-var-x in-\$1-velocites-GEN-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 630 170 tgl 15 0 \$1-durees-VAR-var-mutation in-\$1-durees-VAR-var-mutation
+empty 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 470 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-VAR-var-amp in-\$1-durees-VAR-var-amp
+empty 0 -8 0 10 -262144 -1 -1 4 256;
+#X obj 520 170 nbx 4 15 0 100 0 0 \$1-durees-VAR-var-chance in-\$1-durees-VAR-var-chance
+empty 0 -8 0 10 -262144 -1 -1 10 256;
+#X obj 570 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-VAR-var-x in-\$1-durees-VAR-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 80 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-GEN-lim-min in-\$1-durees-GEN-lim-min
+empty 0 -8 0 10 -262144 -1 -1 3 256;
+#X obj 130 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-GEN-lim-max in-\$1-durees-GEN-lim-max
+empty 0 -8 0 10 -262144 -1 -1 8 256;
+#X obj 360 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-VAR-lim-min in-\$1-durees-VAR-lim-min
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 410 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-VAR-lim-max in-\$1-durees-VAR-lim-max
+empty 0 -8 0 10 -262144 -1 -1 12 256;
+#X obj 190 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-GEN-var-amp in-\$1-durees-GEN-var-amp
+empty 0 -8 0 10 -262144 -1 -1 3 256;
+#X obj 240 170 nbx 4 15 0 100 0 0 \$1-durees-GEN-var-chance in-\$1-durees-GEN-var-chance
+empty 0 -8 0 10 -262144 -1 -1 100 256;
+#X obj 290 170 nbx 4 15 -1e+37 1e+37 0 0 \$1-durees-GEN-var-x in-\$1-durees-GEN-var-x
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X text 40 109 degrés;
+#X obj 736 200 generateur \$1 degres;
+#X obj 886 200 generateur \$1 ecarts;
+#X obj 1026 200 generateur \$1 velocites;
+#X obj 1186 200 generateur \$1 durees;
+#N canvas 805 61 790 803 init 0;
+#X obj 260 51 loadbang;
+#X obj 287 114 f \$1;
+#X obj 327 114 s in-\$0-boucle;
+#X obj 260 756 s \$0-nouvelle-sequence;
+#X obj 260 74 t b b;
+#X obj 234 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 287 136 \; in-\$1-GEN-taille 8 \; in-\$1-degres-GEN-lim-min
+-7 \; in-\$1-degres-GEN-lim-max 7 \; in-\$1-degres-GEN-var-amp 3 \;
+in-\$1-degres-GEN-var-chance 100 \; in-\$1-degres-GEN-var-x 1 \; in-\$1-degres-VAR-lim-min
+-99 \; in-\$1-degres-VAR-lim-max 99 \; in-\$1-degres-VAR-var-amp 8
+\; in-\$1-degres-VAR-var-chance 40 \; in-\$1-degres-VAR-var-x 1 \;
+in-\$1-degres-VAR-var-mutation 1 \; in-\$1-ecarts-GEN-lim-min 3 \;
+in-\$1-ecarts-GEN-lim-max 8 \; in-\$1-ecarts-GEN-var-amp 2 \; in-\$1-ecarts-GEN-var-chance
+20 \; in-\$1-ecarts-GEN-var-x 1 \; in-\$1-ecarts-VAR-lim-min 1 \; in-\$1-ecarts-VAR-lim-max
+12 \; in-\$1-ecarts-VAR-var-amp 4 \; in-\$1-ecarts-VAR-var-chance 10
+\; in-\$1-ecarts-VAR-var-x 1 \; in-\$1-ecarts-VAR-var-mutation 0 \;
+in-\$1-velocites-GEN-lim-min 50 \; in-\$1-velocites-GEN-lim-max 100
+\; in-\$1-velocites-GEN-var-amp 3 \; in-\$1-velocites-GEN-var-chance
+100 \; in-\$1-velocites-GEN-var-x 1 \; in-\$1-velocites-VAR-lim-min
+0 \; in-\$1-velocites-VAR-lim-max 127 \; in-\$1-velocites-VAR-var-amp
+4 \; in-\$1-velocites-VAR-var-chance 60 \; in-\$1-velocites-VAR-var-x
+5 \; in-\$1-velocites-VAR-var-mutation 0 \; in-\$1-durees-GEN-lim-min
+3 \; in-\$1-durees-GEN-lim-max 8 \; in-\$1-durees-GEN-var-amp 3 \;
+in-\$1-durees-GEN-var-chance 100 \; in-\$1-durees-GEN-var-x 1 \; in-\$1-durees-VAR-lim-min
+1 \; in-\$1-durees-VAR-lim-max 12 \; in-\$1-durees-VAR-var-amp 4 \;
+in-\$1-durees-VAR-var-chance 10 \; in-\$1-durees-VAR-var-x 1 \; in-\$1-durees-VAR-var-mutation
+0 \;;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 0;
+#X connect 4 1 2 0;
+#X connect 5 0 4 0;
+#X restore 71 292 pd init;
+#X obj 736 336 variateur \$1 degres;
+#X obj 886 336 variateur \$1 ecarts;
+#X obj 1026 336 variateur \$1 velocites;
+#X obj 1186 336 variateur \$1 durees;
+#X obj 661 279 r \$0-lire;
+#X obj 285 721 s \$0-lire;
+#X obj 304 691 s \$0-bang;
+#X obj 925 282 r \$0-bang;
+#X obj 318 320 r \$0-boucle;
+#X obj 660 25 tgl 15 0 \$0-boucle in-\$0-boucle empty 17 7 0 10 -262144
+-1 -1 1 1;
+#X text 620 24 boucle;
+#X obj 76 378 r power;
+#X obj 76 401 sel 1;
+#X obj 886 382 s \$0-ecarts;
+#X obj 300 464 r \$0-ecarts;
+#X obj 886 124 f;
+#X obj 901 97 r \$1-GEN-taille;
+#X obj 600 25 bng 15 250 50 0 \$0-lire in-\$0-lire empty 17 7 0 10
+-262144 -1 -1;
+#X text 572 24 lire;
+#X obj 76 424 s in-\$0-lire;
+#X connect 0 0 18 0;
+#X connect 0 0 34 0;
+#X connect 0 1 5 1;
+#X connect 0 2 5 2;
+#X connect 0 3 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 7 0;
+#X connect 6 0 1 0;
+#X connect 9 0 15 0;
+#X connect 10 0 0 2;
+#X connect 10 0 122 0;
+#X connect 11 0 0 4;
+#X connect 12 0 14 0;
+#X connect 13 0 6 1;
+#X connect 14 0 22 0;
+#X connect 15 0 114 0;
+#X connect 15 1 115 0;
+#X connect 15 2 35 0;
+#X connect 16 0 6 1;
+#X connect 17 0 6 1;
+#X connect 18 0 6 0;
+#X connect 18 1 31 0;
+#X connect 19 0 16 0;
+#X connect 19 1 17 0;
+#X connect 19 2 13 0;
+#X connect 20 0 24 0;
+#X connect 21 0 57 0;
+#X connect 22 0 9 0;
+#X connect 23 0 27 0;
+#X connect 24 0 25 0;
+#X connect 25 0 22 1;
+#X connect 26 0 14 1;
+#X connect 27 0 26 0;
+#X connect 27 1 26 1;
+#X connect 28 0 29 0;
+#X connect 30 0 124 0;
+#X connect 31 0 19 0;
+#X connect 32 0 105 0;
+#X connect 33 0 110 0;
+#X connect 35 0 28 0;
+#X connect 57 0 24 1;
+#X connect 57 0 25 1;
+#X connect 104 0 109 0;
+#X connect 105 0 33 0;
+#X connect 106 0 111 0;
+#X connect 107 0 112 0;
+#X connect 109 0 0 1;
+#X connect 110 0 10 0;
+#X connect 111 0 0 3;
+#X connect 112 0 11 0;
+#X connect 113 0 0 0;
+#X connect 116 0 111 0;
+#X connect 116 0 112 0;
+#X connect 116 0 110 0;
+#X connect 116 0 109 0;
+#X connect 117 0 26 0;
+#X connect 120 0 121 0;
+#X connect 121 0 128 0;
+#X connect 123 0 20 0;
+#X connect 124 0 32 0;
+#X connect 124 0 104 0;
+#X connect 124 0 107 0;
+#X connect 124 0 106 0;
+#X connect 125 0 124 1;
+#X coords 0 -1 1 1 660 170 1 20 20;
