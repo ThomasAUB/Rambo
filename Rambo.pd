@@ -17,7 +17,7 @@
 #X text 414 139 dharm;
 #X text 416 168 pent;
 #X obj 376 72 vradio 30 1 0 4 gamme-select in-gamme-select empty 0
--8 0 10 -262144 -162280 -1 1;
+-8 0 10 -262144 -162280 -1 0;
 #X msg 598 73 0 2 4 5 7 9 11;
 #X msg 598 97 0 1 4 5 7 8 10;
 #X msg 597 123 0 1 4 5 7 8 11;
@@ -56,24 +56,24 @@
 -166441 -1 0 1;
 #X obj 115 85 tgl 15 0 roue-deg-3 in-roue-deg-3 empty 17 7 0 10 -262144
 -166441 -1 0 1;
-#X obj 25 85 tgl 15 0 roue-deg-9 in-roue-deg-9 empty 17 7 0 10 -262144
--166441 -1 0 1;
-#X obj 32 65 tgl 15 0 roue-deg-10 in-roue-deg-10 empty 17 7 0 10 -166441
+#X obj 25 85 tgl 15 0 roue-deg-9 in-roue-deg-9 empty 17 7 0 10 -166441
 -166441 -1 1 1;
-#X obj 50 47 tgl 15 0 roue-deg-11 in-roue-deg-11 empty 17 7 0 10 -262144
+#X obj 32 65 tgl 15 0 roue-deg-10 in-roue-deg-10 empty 17 7 0 10 -262144
 -166441 -1 0 1;
-#X obj 90 47 tgl 15 0 roue-deg-1 in-roue-deg-1 empty 17 7 0 10 -166441
+#X obj 50 47 tgl 15 0 roue-deg-11 in-roue-deg-11 empty 17 7 0 10 -166441
 -166441 -1 1 1;
-#X obj 108 65 tgl 15 0 roue-deg-2 in-roue-deg-2 empty 17 7 0 10 -262144
+#X obj 90 47 tgl 15 0 roue-deg-1 in-roue-deg-1 empty 17 7 0 10 -262144
 -166441 -1 0 1;
+#X obj 108 65 tgl 15 0 roue-deg-2 in-roue-deg-2 empty 17 7 0 10 -166441
+-166441 -1 1 1;
 #X obj 108 105 tgl 15 0 roue-deg-4 in-roue-deg-4 empty 17 7 0 10 -166441
 -166441 -1 1 1;
 #X obj 90 123 tgl 15 0 roue-deg-5 in-roue-deg-5 empty 17 7 0 10 -166441
 -166441 -1 1 1;
 #X obj 50 123 tgl 15 0 roue-deg-7 in-roue-deg-7 empty 17 7 0 10 -166441
 -166441 -1 1 1;
-#X obj 32 105 tgl 15 0 roue-deg-8 in-roue-deg-8 empty 17 7 0 10 -166441
--166441 -1 1 1;
+#X obj 32 105 tgl 15 0 roue-deg-8 in-roue-deg-8 empty 17 7 0 10 -262144
+-166441 -1 0 1;
 #X obj 63 662 outlet;
 #X obj 172 20 inlet;
 #X text 73 39 0;
