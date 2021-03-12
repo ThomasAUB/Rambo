@@ -2,7 +2,7 @@
 #X declare -path abs;
 #X obj 35 93 bng 30 250 50 0 out-metro metro empty 17 7 0 10 -1 -258113
 -1;
-#X obj 35 55 tgl 30 0 power in-power empty 17 7 0 10 -1 -4034 -1 1
+#X obj 35 55 tgl 30 0 power in-power empty 17 7 0 10 -1 -4034 -1 0
 1;
 #X obj 378 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
